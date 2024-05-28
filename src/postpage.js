@@ -9,7 +9,7 @@ const Postpage = () => {
     };
 
     getPosts();
-  }, []);
+  }, [postsData]);
   return (
     <>
       {postsData.map((post) => (

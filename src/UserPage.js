@@ -9,7 +9,7 @@ const UserPage = () => {
     };
 
     getUsers();
-  }, []);
+  }, [userData]);
   return (
     <>
       {userData.map((user) => (

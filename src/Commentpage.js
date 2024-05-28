@@ -9,7 +9,7 @@ const CommentPage = () => {
     };
 
     getComments();
-  }, []);
+  }, [commentsData]);
   return (
     <>
       {commentsData.map((comment) => (
