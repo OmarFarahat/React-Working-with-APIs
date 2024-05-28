@@ -11,14 +11,24 @@ const Postpage = () => {
     getPosts();
   }, [postsData]);
   return (
-    <>
-      {postsData.map((post) => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <h4>{post.body}</h4>
-        </div>
-      ))}
-    </>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          {postsData.map((post) => (
+            <tr key={post.id}>
+              <td>{post.title}</td>
+              <td>{post.body}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

@@ -11,14 +11,26 @@ const CommentPage = () => {
     getComments();
   }, [commentsData]);
   return (
-    <>
-      {commentsData.map((comment) => (
-        <div key={comment.id}>
-          <h3>{comment.title}</h3>
-          <h4>{comment.body}</h4>
-        </div>
-      ))}
-    </>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          {commentsData.map((comment) => (
+            <tr key={comment.id}>
+              <td>{comment.name}</td>
+              <td>{comment.email}</td>
+              <td>{comment.body}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
